@@ -13,7 +13,7 @@ public class Main extends JavaPlugin {
 
 	public void onEnable(){
 		new SeasonManage(false);
-		Bukkit.getPluginManager().registerEvents(new PlayerJoin(this), this);
+		Bukkit.getPluginManager().registerEvents(new PlayerJoin(), this);
 	}
 	public void onDisable(){
 		

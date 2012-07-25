@@ -18,20 +18,24 @@ public class SeasonBiome {
 		ArrayList<Block> cb = new ArrayList<Block>(); 
 		ArrayList<Chunk> c = new ArrayList<Chunk>();
 		
-		int minX = (int) (p.getLocation().getX()-100);
-		int minZ = (int) (p.getLocation().getZ()-100);
+		int minX = p.getLocation().getBlockX()-100;
+		int minZ = p.getLocation().getBlockZ()-100;
 		
 		for(int i = 0; i< 200; i++)
 			for(int j = 0; j<200;j++)
 				cb.add(w.getBlockAt(minX+i, 0, minZ+j));
 		
 		for(int i=0; i<cb.size();i++){
+			int x = cb.get(i).getX();
+			int z = cb.get(i).getZ();
+			
 			if(!c.contains(w.getChunkAt(cb.get(i)))){
 				c.add(w.getChunkAt(cb.get(i)));
-				w.regenerateChunk(cb.get(i).getX(), cb.get(i).getZ());
+				w.regenerateChunk(x, z);
 			}
-			if(!w.getBiome(cb.get(i).getX(),cb.get(i).getZ()).equals(Biome.DESERT) || !w.getBiome(cb.get(i).getX(),cb.get(i).getZ()).equals(Biome.DESERT_HILLS))
-				w.setBiome(cb.get(i).getX(), cb.get(i).getZ(), Biome.ICE_PLAINS);
+			
+			if(!w.getBiome(x, z).equals(Biome.DESERT) || !w.getBiome(x, z).equals(Biome.DESERT_HILLS))
+				w.setBiome(x, z, Biome.ICE_PLAINS);
 		}
 		return true;
 	} 
