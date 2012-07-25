@@ -1,0 +1,5 @@
+main: fr.Pasificking.Main
+name: SeasonManager
+version: 0.1b
+commands:
+  hello:
