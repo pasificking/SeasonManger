@@ -3,9 +3,9 @@ package fr.Pasificking.SeasonManager;
 public class Season {
 
 	private String name = new String();
-	private int duration;
+	private long duration;
 	
-	Season(String name,int duration){
+	Season(String name,long duration){
 		this.setName(name);
 		this.setDuration(duration);
 	}
@@ -18,11 +18,11 @@ public class Season {
 		this.name = name;
 	}
 
-	public int getDuration() {
+	public long getDuration() {
 		return duration;
 	}
 
-	public void setDuration(int duration) {
+	public void setDuration(long duration) {
 		this.duration = duration;
 	}
 	

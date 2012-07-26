@@ -13,8 +13,10 @@ public class SeasonBiome {
 	public SeasonBiome(){
 		
 	}
+	
 	public static boolean SeasonInitialise(Player p){
 		World w = p.getWorld();
+		
 		ArrayList<Block> cb = new ArrayList<Block>(); 
 		ArrayList<Chunk> c = new ArrayList<Chunk>();
 		

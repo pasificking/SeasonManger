@@ -7,22 +7,22 @@ public class SeasonManage {
 	private static Season ActuallySeason;
 	public static ArrayList<Season> Season = new ArrayList<Season>();
 	
-	public SeasonManage(Boolean init){
+	public SeasonManage(Boolean init,int Duration){
 		if(!init){
-			Season.add(new Season("Primtemps",20));
-			Season.add(new Season("EtÃ©",20));
-			Season.add(new Season("Automne",20));
-			Season.add(new Season("Hiver",20));
+			Season.add(new Season("Primtemps",Duration));
+			Season.add(new Season("Eté",Duration));
+			Season.add(new Season("Automne",Duration));
+			Season.add(new Season("Hiver",Duration));
 			setActuallySeason(Season.get(0));
 		}
 	}
 	
-	public SeasonManage(Boolean init,int Duration){
+	public SeasonManage(Boolean init){
 		if(!init){
-			Season.add(new Season("Primtemps",Duration));
-			Season.add(new Season("EtÃ©",Duration));
-			Season.add(new Season("Automne",Duration));
-			Season.add(new Season("Hiver",Duration));
+			Season.add(new Season("Primtemps",20));
+			Season.add(new Season("Eté",20));
+			Season.add(new Season("Automne",20));
+			Season.add(new Season("Hiver",20));
 			setActuallySeason(Season.get(0));
 		}
 	}

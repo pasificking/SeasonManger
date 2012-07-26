@@ -15,7 +15,7 @@ public class PlayerJoin implements Listener{
 	
 	@EventHandler
 	public void onPlayerJoin(PlayerJoinEvent e){
-		e.setJoinMessage(ChatColor.BLUE+""+ChatColor.ITALIC+"Bonjours, "+e.getPlayer().getName()+".On est actuellements en "+SeasonManage.getActuallySeason().getName());
+		e.setJoinMessage(ChatColor.BLUE+""+ChatColor.ITALIC+"Bonjours, "+e.getPlayer().getName()+". On est actuellements en "+SeasonManage.getActuallySeason().getName());
 		if(!SeasonBiome.SeasonInitialise(e.getPlayer())){
 		}
 	}
